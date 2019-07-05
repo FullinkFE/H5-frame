@@ -1,0 +1,90 @@
+/**
+ * Main Page
+ */
+
+
+.main {
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  color: #fff;
+  background-color: #000;
+}
+
+a {
+  color: #fff;
+}
+
+.pr {
+  position: relative;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 60px;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    li {
+      position: relative;
+      &.on {
+        font-weight: bold;
+      }
+      &.on::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        margin: auto;
+        width: 88px;
+        height: 1px;
+        background: #fff;
+      }
+    }
+  }
+}
+
+.cropland, .energize, .benefit, .run {
+  max-width: 100%;
+}
+
+.cropland {
+  margin-top: 20px;
+}
+
+.border {
+  @include border(bottom, #fff, 2px);
+}
+
+footer {
+  margin-top: 20px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .medication {
+    @include  bg-wh('../img/img1/medication.png')
+  }
+
+  .pill {
+    @include  bg-wh('../img/img1/pill.png')
+  }
+
+  .microscope {
+    @include  bg-wh('../img/img2/microscope.png')
+  }
+
+  .bottle {
+    @include  bg-wh('../img/img2/bottle.png')
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["babel-preset-env", {
+      "targets": {
+        "browsers": ["iOS >= 5", "Android >= 2.3"]
+      }
+    }]
+  ],
+  "plugins": [
+    "babel-plugin-transform-runtime"
+  ]
+}
