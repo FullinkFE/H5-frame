@@ -21,8 +21,8 @@ var preloader = new Preloader({
     require('../img/img2/benefit.jpg'),
     require('../img/img2/run.jpg')
   ],
-  concurrency: 4,   // 并发数测试，生产环境一般设置为0
-  perMinTime: 1000 // 加载每个资源所需的最小时间，一般用来测试 loading
+  concurrency: 0,   // 并发数测试，生产环境一般设置为0
+  perMinTime: 0 // 加载每个资源所需的最小时间，一般用来测试 loading
 });
 preloader.addProgressListener(function (loaded, length) {
   console.log('loaded', loaded, length, loaded / length);
