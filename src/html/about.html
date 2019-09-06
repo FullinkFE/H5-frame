@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.1/lib/index.css">
+  <!-- 不要删除或改变下面这行代码 -->
+  {{{__HEAD_JAVASCRIPT__}}}
+</head>
+<body>
+<div id="app">
+  <h1>{{name}}</h1>
+
+  <van-button type="default" @click="show = true">默认按钮</van-button>
+  <van-button
+    type="primary"
+    @click="showDialog"
+  >显示遮罩层</van-button>
+
+  <van-dialog
+    v-model="show"
+    title="标题"
+    show-cancel-button
+  >aaaa</van-dialog>
+</div>
+</body>
+</html>

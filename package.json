@@ -13,7 +13,9 @@
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-env": "1.6.1",
     "preload-webpack-plugin": "^2.3.0",
-    "preloader.js": "^1.0.0"
+    "preloader.js": "^1.0.0",
+    "vant": "^2.1.8",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "eslint": "^5.3.0",

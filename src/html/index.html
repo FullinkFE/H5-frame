@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.1/lib/index.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- 不要删除或改变下面这行代码 -->
+  {{{__HEAD_JAVASCRIPT__}}}
+</head>
+<body>
+
+<div id="app">
+<!--  <h1>{{name}}1111</h1>-->
+<!--  <van-loading type="spinner" />-->
+  <van-button type="default" @click="show = true">默认按钮</van-button>
+    <van-button
+      type="primary"
+      @click="showDialog"
+    >显示遮罩层</van-button>
+
+  <van-dialog
+    v-model="show"
+    title="标题"
+    show-cancel-button
+  >aaaa</van-dialog>
+
+
+  <van-area :area-list="areaList" />
+
+
+<!--  <van-overlay-->
+<!--    :show="show"-->
+<!--    @click="show = false"-->
+<!--  />-->
+</div>
+
+</body>
+</html>

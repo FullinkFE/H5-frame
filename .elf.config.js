@@ -19,11 +19,15 @@ module.exports = {
   /**
    * webpack base config
    */
-  entry: 'src/js/main.js',
+  entry: {
+    index: 'src/js/index.js',
+    about: 'src/js/about.js',
+    vue: 'vue/dist/vue.min.js',
+  },
   output: {
     path: 'dist',
     publicPath: './',  // js 的引入路径的公用前缀，比如：<script type="text/javascript" src="./js/bundle.c34921.js"></script>
-    filename: 'js/bundle.[hash:6].js'
+    filename: 'js/[name].[hash:6].js'
   },
   outputCss: 'css/app.[hash:6].css',
   outputCssPublicPath: '../', // css的资源引入路径的公用前缀，例如：background: url('../img/html5-logo.png');
@@ -86,6 +90,31 @@ module.exports = {
   },{
 
   }],
+
+  htmlWebpackPluginOptions: [
+    {
+      title: 'index',
+      // Load a custom template (lodash by default)
+      template: 'src/html/index.html',
+      filename: 'index.html',
+      chunks: ['manifest','chunk','index']
+    },
+    {
+      title: 'about',
+      // Load a custom template (lodash by default)
+      template: 'src/html/about.html',
+      filename: 'about.html',
+      chunks: ['manifest','chunk','about']
+    },
+  ],
+
+  commonsChunkPluginOptions: {
+    name: "chunk",
+
+    minChunks:2,
+
+    chunks:[ "index", "about"],
+  },
   /**
    * webpack development config
    *
